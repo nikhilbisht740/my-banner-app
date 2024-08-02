@@ -176,8 +176,8 @@ const HomePage = () => {
                 <Image
                   src={banner.imageUrl}
                   alt={banner.title}
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  style={{ objectFit: "cover" }}
                 />
               </Link>
 

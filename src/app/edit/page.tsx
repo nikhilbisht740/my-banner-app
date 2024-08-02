@@ -2,6 +2,7 @@
 
 import { useSearchParams } from "next/navigation";
 import BannerEditor from "@/components/BannerEditor";
+import { Suspense } from "react";
 
 const banners = [
   { id: 1, imageUrl: "/images/banner1.jpg", title: "Summer BBQ" },
@@ -25,7 +26,7 @@ export default function EditBannerPage() {
   }
 
   return (
-    <div>
+    <Suspense>
       <h1
         style={{
           textAlign: "center",
@@ -37,6 +38,6 @@ export default function EditBannerPage() {
         initialImageUrl={banner.imageUrl}
         initialTitle={banner.title}
       />
-    </div>
+    </Suspense>
   );
 }
