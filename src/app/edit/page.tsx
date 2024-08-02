@@ -31,7 +31,7 @@ export default function EditBannerPage() {
           textAlign: "center",
         }}
       >
-        Edit Banner{" "}
+        Edit Banner
       </h1>
       <BannerEditor
         initialImageUrl={banner.imageUrl}

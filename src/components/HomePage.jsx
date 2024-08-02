@@ -169,17 +169,15 @@ const HomePage = () => {
             >
               <Link
                 href={{
-                  pathname: "/pages",
+                  pathname: "/edit",
                   query: { id: banner.id },
                 }}
               >
                 <Image
                   src={banner.imageUrl}
                   alt={banner.title}
-                  // layout="fill"
-                  // objectFit="cover"
-                  fill
-                  style={{ objectFit: "cover" }}
+                  layout="fill"
+                  objectFit="cover"
                 />
               </Link>
 

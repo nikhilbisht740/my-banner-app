@@ -4,6 +4,7 @@ import { styled } from "@mui/system";
 import { Upload, X } from "lucide-react";
 import { useDropzone } from "react-dropzone";
 import html2canvas from "html2canvas";
+import Link from "next/link";
 
 interface BannerData {
   title: string;
@@ -114,10 +115,12 @@ const BannerEditor: React.FC<BannerEditorProps> = ({
           mb: 2,
         }}
       >
-        {/* <Typography variant="h6">Banner Edit</Typography> */}
-        <IconButton size="small">
-          <X size={18} />
-        </IconButton>
+        <Typography variant="h6"></Typography>
+        <Link href="/">
+          <IconButton size="small">
+            <X size={18} />
+          </IconButton>
+        </Link>
       </Box>
 
       <DropZone {...getRootProps()}>
