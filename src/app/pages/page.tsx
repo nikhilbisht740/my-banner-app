@@ -2,7 +2,7 @@
 
 import { useSearchParams } from "next/navigation";
 import BannerEditor from "@/components/BannerEditor";
-// import { log } from "console";
+import { Suspense } from "react";
 
 const banners = [
   { id: 1, imageUrl: "/images/banner1.jpg", title: "Summer BBQ" },
@@ -15,9 +15,7 @@ const banners = [
 ];
 
 export default function EditBannerPage() {
-  // const pathname = usePathname();
   const searchParams = useSearchParams();
-  // console.log(pathname);
 
   const id = searchParams.get("id");
 
@@ -28,7 +26,7 @@ export default function EditBannerPage() {
   }
 
   return (
-    <div>
+    <Suspense>
       <h1
         style={{
           textAlign: "center",
@@ -40,6 +38,6 @@ export default function EditBannerPage() {
         initialImageUrl={banner.imageUrl}
         initialTitle={banner.title}
       />
-    </div>
+    </Suspense>
   );
 }
