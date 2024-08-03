@@ -54,7 +54,7 @@ export default function RootLayout({
       <body
         className={inter.className}
         style={{
-          backgroundImage: "url('/images/background.jpg')",
+          backgroundImage: "url('/imag/background.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
